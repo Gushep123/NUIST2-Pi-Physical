@@ -1,4 +1,6 @@
 #Yang Letain 26/3/30 This is a program for quiz, Amimal quiz
+import RPI.GPIO as GPIO
+import time 
 # NUIST Quiz Game in Python
 def quiz():
     print("Welcome to the Animal Quiz!")
@@ -21,11 +23,21 @@ def quiz():
         if user_answer == answers[i]:
             print("Correct!")
             score += 1
+	    GPIO.output(18,GPIO.HIGH)
+	    time.sleep(1)
+	    GPIO.output(18,GPIO.LOW)
         else:
             print("Incorrect!")
+	    GPIO.output(23,GPIO.HIGH)
+            time.sleep(1)
+            GPIO.output(23,GPIO.LOW)
     # Provide final score
     print("\nQuiz completed!")
     print(f"You got {score}/{len(questions)} questions correct.")
 
 # Run the quiz function
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(18,GPIO.OUT)
+GPIO.setup(23,GPIO.OUT)
 quiz()
