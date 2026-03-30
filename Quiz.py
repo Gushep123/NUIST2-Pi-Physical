@@ -1,3 +1,4 @@
+#Yang Letain 26/3/30 This is a program for quiz, Amimal quiz
 # NUIST Quiz Game in Python
 def quiz():
     print("Welcome to the Animal Quiz!")
