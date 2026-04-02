@@ -1,5 +1,5 @@
 
-#Yang Letain 26/3/30 This is a program for quiz, Amimal quiz
+#Yang Letain 26/4/2 This is a program for quiz, python quiz
 import RPi.GPIO as GPIO
 import time 
 # NUIST Quiz Game in Python
